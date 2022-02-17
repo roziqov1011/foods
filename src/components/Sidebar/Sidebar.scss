@@ -1,0 +1,97 @@
+@import "../../assets/scss/colors.scss";
+
+.sidebar{
+    width: 105px;
+    height: 100%;
+    padding-top: 24px;
+    padding-left: 12px;
+    padding-bottom: 24px;
+    background-color: $main-color-dark;
+    display: flex;
+    flex-direction: column;
+    
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .link{
+        display: inline-block;
+        padding: 10px 25px 10px 12px;
+        margin-bottom: 20px;
+        border-radius: 12px 0px 0px 12px;
+        position: relative;
+        ::before{
+            display: none;
+            width: 12px;
+            height: 12px;
+            content: '';
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            right: 0;
+            background-image: url(../../assets/img/top.png);
+        }
+        ::after{
+            display: none;
+            width: 12px;
+            height: 12px;
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 98%;
+            right: 0;
+            background-image: url(../../assets/img/bottom.png);
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            width: 56px;
+            height: 56px;
+            svg{
+                path{
+                    fill: $color-orange;
+                }
+            }
+        }
+    }
+    .link-active{
+        background-color: $main-color;
+        ::before{
+            display: inline-block;
+        }
+        ::after{
+            display: inline-block;
+        }
+        span{
+            background-color: $color-orange;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        display: inline-block;
+        margin-left: 12px;
+        margin-top: auto;
+        cursor: pointer;
+        svg{
+            path{
+                fill: $color-orange;
+            }
+        }
+    }
+
+}
+.logo{
+    display: inline-block;
+    padding-left: 12px;
+    margin-bottom: 24px;
+}

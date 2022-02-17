@@ -1,0 +1,20 @@
+.class_name {
+    height: 500px;
+    overflow: auto;
+}
+
+
+.class_name::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgb(35, 165, 204);
+}
+
+.class_name::-webkit-scrollbar-thumb {
+    background: rgb(32, 168, 4);
+
+}
+
+.class_name:hover::-webkit-scrollbar-thumb {
+    background: rgb(250, 4, 4);
+    width: 8px;
+}
